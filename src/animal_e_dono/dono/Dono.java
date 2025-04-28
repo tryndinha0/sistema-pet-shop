@@ -7,11 +7,12 @@ public class Dono{
     private String endereco;
     private String cpf;
 
-    public Dono(int id, String nome, String telefone, String endereco) {
+    public Dono(int id, String nome, String telefone, String endereco,String cpf) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.endereco = endereco;
+        this.cpf = cpf;
     }
 
     

@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 
 import animal_e_dono.animal.Pet;
 import animal_e_dono.dono.Dono;
@@ -62,11 +61,26 @@ public class Sistema {
             System.out.println("Erro ao salvar vacinas: " + e.getMessage());
         }
     }
+    public void salvarDonosEmArquivo(String caminhoArquivo) {
+        try (FileWriter writer = new FileWriter(caminhoArquivo)) {
+            for (Dono dono : donos) {
+                writer.write("ID Dono: " + dono.getId() +
+                        ", Nome: " + dono.getNome() +
+                        ", Telefone: " + dono.getTelefone() +
+                        ", Endereço: " + dono.getEndereco() + 
+                        ", Cpf: " + dono.getCpf() + "\n");
+            }
+            System.out.println("Donos salvos no arquivo " + caminhoArquivo);
+        } catch (IOException e) {
+            System.out.println("Erro ao salvar donos: " + e.getMessage());
+        }
+    }
 
     public void salvarTodosOsDados() {
         salvarPetsEmArquivo("pets.txt");
         salvarConsultasEmArquivo("consultas.txt");
         salvarVacinasEmArquivo("vacinas.txt");
+        salvarDonosEmArquivo("donos.txt");
     }
 
     // Método para cadastrar dono no sistema
