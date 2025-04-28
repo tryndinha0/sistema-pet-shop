@@ -6,7 +6,7 @@ public class Animal {
     protected String tipo_animal;
     protected String cor;
     protected int num_pata;
-    private String barulho;//qual é o barulho do animal???
+    protected String barulho;//qual é o barulho do animal???
     
     
     public void informacoesAnimal(String especie, String raca, String tipo_animal,String cor,int pata,String barulho) {

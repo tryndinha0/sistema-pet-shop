@@ -8,11 +8,11 @@ public class Main {
         Dono dono = new Dono(1, "Lucas Pereira", "99998888", "Rua das Palmeiras, 321","00000000000");
         sistema.cadastrarDono(dono);
 
-        Pet pet = new Pet(1, "Bidu", dono);
+        Pet pet = new Pet(2, "Bidu", dono);
         sistema.cadastrarPet(pet);
 
-        sistema.agendarConsulta(1, 1, "28/04/2025", "Dra. Carolina");
-        sistema.administrarVacina(1, 1, "Antirrábica", "28/04/2025");
+        sistema.agendarConsulta(1, 2, "28/04/2025", "Dra. Carolina");
+        sistema.administrarVacina(1, 2, "Antirrábica", "28/04/2025");
 
         // Salvar os dados no final
         sistema.salvarTodosOsDados();

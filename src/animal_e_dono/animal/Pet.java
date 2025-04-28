@@ -60,7 +60,9 @@ public class Pet extends Animal{
         return historicoMedico;
     }
 
-    
+    public void setBarulho(String barulho){
+        this.barulho=barulho;
+    }
     //getters
     public String getEspecie() {
         return especie;
